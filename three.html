@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Click Listener Demo</title>
+</head>
+<body>
+
+    <h2>User Form</h2>
+
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" value="Amit"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" value="20"><br><br>
+
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" value="12345"><br><br>
+
+
+    <button id="btn">Submit</button>
+
+    <hr>
+
+  
+    <div id="output"></div>
+
+    <script>
+        
+        document.getElementById('btn').addEventListener('click', function() {
+            
+        
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let pwd = document.getElementById('pwd').value;
+
+         
+            document.getElementById('output').innerHTML = `
+                <h3>Page Output:</h3>
+                <p>Name: ${name}</p>
+                <p>Age: ${age}</p>
+                <p>Password: ${pwd}</p>
+            `;
+
+     
+            alert("Name: " + name + "\nAge: " + age + "\nPassword: " + pwd);
+
+            
+            document.getElementById('name').value = "RAJ KUMAR";
+            document.getElementById('age').value = "25";
+            document.getElementById('pwd').value = "54321";
+            
+        });
+    </script>
+
+</body>
+</html>

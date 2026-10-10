@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script>
+      function changeimg()
+        {
+           /* var imgKiet=document.getElementById('imgKiet');
+            imgKiet.src="Assigments/images/on.avif";
+            */
+           
+        }
+        function changeimg2()
+        {
+            document.getElementById('imgkiet').src="Assigments/images/off.webp";
+        }
+        function Showdata()
+        {
+            let name=document.getElementById('name').value;
+            let age=document.getElementById('age').value;
+            let pwd=document.getElementById('pwd').value;
+            document.getElementById('name').value="RAJ KUMAR";
+            alert(name);
+        }
+            
+       
+            
+    </script>
+</head>
+<body>
+    Enter the name: <input type="text" id="name"><br>
+    Enter the Age: <input type="number" id="age"><br>
+    Enter the Password: <input type="password" id="pwd"><br>
+    
+    <button type="button" id="showdata">Show Data</button><br><br><br><br><br><br><br>
+
+    <div id="dd">Hello</div>
+    <div id="Other">Hello</div>
+    <img id="imgKiet" src="Assigments/images/off.webp" onmouseover="changeimg();" onmouseleave="changeimg2();">
+    <button type="button" onclick="changeimg();">Change Image</button>
+
+</body>
+</html>
+<script>
+    document.getElementById('dd').innerText="<b>Hi, How <br>are you?</b>";
+     document.getElementById('Other').innerHTML="<b>Hi, How <br>are you?</b>";
+     document.getElementById('showdata').addEventListener("click",Showdata);
+     document.getElementById('showdata').addEventListener("click",function(){});
+
+</script>

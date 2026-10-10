@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On Off</title>
+    <script>
+        function toggleBulb() {
+            var bulb = document.getElementById('bulb');
+            var btn = document.getElementById('btn');
+
+            
+            if (bulb.src.match("off.webp")) {
+                bulb.src = "images/on.avif";
+                btn.innerText = "OFF";
+            } else {
+                bulb.src = "images/off.webp";
+                btn.innerText = "ON";
+            }
+        }
+
+        function bulbOn() {
+            document.getElementById('bulb').src = "images/on.avif";
+            document.getElementById('btn').innerText = "OFF";
+        }
+
+        function bulbOff() {
+            document.getElementById('bulb').src = "images/off.webp";
+            document.getElementById('btn').innerText = "ON";
+        }
+    </script>
+</head>
+<body>
+
+    <img id="bulb" src="images/off.webp" width="150" height="200" onmouseover="bulbOn();" onmouseleave="bulbOff();">
+    <br><br>
+    
+    <button id="btn" type="button" onclick="toggleBulb();">ON</button>
+
+</body>
+</html>
